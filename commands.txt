@@ -1,0 +1,70 @@
+在python中启动一个服务器
+python3 -m http.server
+
+创建资源包
+ros2 pkg create 包名 --build-type ament_cmake --dependencies rclcpp geometry_msgs turtlesim (依赖名)--license Apache-2.0
+ros2 pkg create learn_py --build-type ament_python --license Apache-2.0
+
+构建资源包
+colcon build
+修改环境变量
+source install/setup.bash
+运行功能包
+ros2 run 包名 可执行文件名
+
+创建工作空间
+mkdir -p 工作空间名/src
+只构建一个功能包
+colcon build --packages-select 包名
+修改包之间的依赖关系
+修改package.xml即可
+
+话题通信相关
+发布节点->话题名称、消息接口->订阅节点
+
+运行海龟模拟器
+ros2 run turtlesim turtlesim_node
+键盘控制乌龟
+ros2 run turtlesim turtle_teleop_key
+召唤两只神龟
+ros2 service call /spawn turtlesim/srv/Spawn "{x: 5.5, y: 5.5, theta: 0.0, name: 'turtle2'}"
+查看接口定义
+ros2 node info /turtlesim
+查看话题内容
+ros2 topic echo /turtle1/pose(话题的名字)
+
+示例：
+坐标
+x: 5.544444561004639
+y: 5.544444561004639
+乌龟脑袋的朝向(单位是弧度)
+theta: 0.0
+线速度
+linear_velocity: 0.0
+角速度
+angular_velocity: 0.0
+
+查看话题信息
+ros2 topic info /turtle1/cmd_vel -v
+接口定义
+ros2 interface show geometry_msgs/msg/Twist(接口名称可以从上一条命令中获得)
+使用话题控制机器人
+ros2 topic pub /turtle1/cmd_vel(话题的名字) geometry_msgs/msg/Twist(消息接口) "{linear: {x: 1.0, y: 0.0}, angular: {z: 0.0}}"(消息接口的内容填充)
+
+发布base_link到base_laser之间的变换：
+ros2 run tf2_ros static_transform_publisher --x 0.1 --y 0.0 --z 0.2 --roll 0.0 --pitch 0.0 --yaw 0.0 --frame-id base_link --child-frame-id base_laser
+查询base_link到wall_point之间的变换:
+ros2 run tf2_ros tf2_echo base_link wall_point
+查看TF树
+ros2 run tf2_tools view_frames
+
+启动foxglove
+ros2 launch foxglove_bridge foxglove_bridge_launch.xml
+
+决策树
+ros2 topic pub /game_start std_msgs/msg/Bool "data: true" -1
+ros2 topic pub /cur_hp std_msgs/msg/Float32 "data: 400.0" -1
+ros2 topic pub /teammate_at_center std_msgs/msg/Bool "data: true" -1
+ros2 topic pub /center_teammate_hp std_msgs/msg/Float32 "data: 100.0" -1
+ros2 topic pub /game_process std_msgs/msg/Float32 "data: 1.0" -1
+ros2 topic pub /enermy_approach std_msgs/msg/Bool "data: true" -1

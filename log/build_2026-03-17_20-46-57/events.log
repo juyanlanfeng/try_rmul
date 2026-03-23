@@ -1,0 +1,96 @@
+[0.000000] (-) TimerEvent: {}
+[0.001088] (ul_decision) JobQueued: {'identifier': 'ul_decision', 'dependencies': OrderedDict()}
+[0.001161] (ul_decision) JobStarted: {'identifier': 'ul_decision'}
+[0.008222] (ul_decision) JobProgress: {'identifier': 'ul_decision', 'progress': 'cmake'}
+[0.009278] (ul_decision) JobProgress: {'identifier': 'ul_decision', 'progress': 'build'}
+[0.010079] (ul_decision) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/bluemaple/learn_projects/try_ul/build/ul_decision', '--', '-j24', '-l24'], 'cwd': '/home/bluemaple/learn_projects/try_ul/build/ul_decision', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'bluemaple'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bluemaple'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.111.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1524'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '4371'), ('BUNDLED_DEBUGPY_PATH', '/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5144'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bluemaple/learn_projects/try_ul/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bluemaple'), ('JOURNAL_STREAM', '8:18635'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bluemaple'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/bluemaple/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/bluemaple/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/bluemaple-Legion-Y9000P-IAX10:@/tmp/.ICE-unix/4346,unix/bluemaple-Legion-Y9000P-IAX10:/tmp/.ICE-unix/4346'), ('INVOCATION_ID', 'ee4c2c634029465e9ef3cc32198f461c'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-deeffb52bfa2782c.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/bluemaple/.config/Code/User/workspaceStorage/f935d52ba4d6062298ec9a440e5db7e1/ms-python.python/pythonrc.py'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-3af1b0029d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bluemaple/learn_projects/try_ul/install/ul_decision:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bluemaple/learn_projects/try_ul/build/ul_decision'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/bluemaple/learn_projects/try_ul/install/ul_decision:/opt/ros/humble')]), 'shell': False}
+[0.045191] (ul_decision) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o\x1b[0m\n'}
+[0.046979] (ul_decision) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/main.dir/plugins/Condition/GameStart.cpp.o\x1b[0m\n'}
+[0.099543] (-) TimerEvent: {}
+[0.200047] (-) TimerEvent: {}
+[0.300454] (-) TimerEvent: {}
+[0.400709] (-) TimerEvent: {}
+[0.502690] (-) TimerEvent: {}
+[0.602993] (-) TimerEvent: {}
+[0.703498] (-) TimerEvent: {}
+[0.807097] (-) TimerEvent: {}
+[0.907399] (-) TimerEvent: {}
+[1.007686] (-) TimerEvent: {}
+[1.108006] (-) TimerEvent: {}
+[1.208343] (-) TimerEvent: {}
+[1.308696] (-) TimerEvent: {}
+[1.409847] (-) TimerEvent: {}
+[1.511285] (-) TimerEvent: {}
+[1.611654] (-) TimerEvent: {}
+[1.712049] (-) TimerEvent: {}
+[1.812854] (-) TimerEvent: {}
+[1.913224] (-) TimerEvent: {}
+[2.013937] (-) TimerEvent: {}
+[2.114702] (-) TimerEvent: {}
+[2.215344] (-) TimerEvent: {}
+[2.315832] (-) TimerEvent: {}
+[2.417076] (-) TimerEvent: {}
+[2.517421] (-) TimerEvent: {}
+[2.619095] (-) TimerEvent: {}
+[2.719395] (-) TimerEvent: {}
+[2.819880] (-) TimerEvent: {}
+[2.920706] (-) TimerEvent: {}
+[3.022907] (-) TimerEvent: {}
+[3.123190] (-) TimerEvent: {}
+[3.224254] (-) TimerEvent: {}
+[3.324987] (-) TimerEvent: {}
+[3.429097] (-) TimerEvent: {}
+[3.529597] (-) TimerEvent: {}
+[3.630179] (-) TimerEvent: {}
+[3.733099] (-) TimerEvent: {}
+[3.833402] (-) TimerEvent: {}
+[3.933861] (-) TimerEvent: {}
+[4.034415] (-) TimerEvent: {}
+[4.135525] (-) TimerEvent: {}
+[4.235999] (-) TimerEvent: {}
+[4.336486] (-) TimerEvent: {}
+[4.437140] (-) TimerEvent: {}
+[4.538101] (-) TimerEvent: {}
+[4.638619] (-) TimerEvent: {}
+[4.739468] (-) TimerEvent: {}
+[4.839928] (-) TimerEvent: {}
+[4.940952] (-) TimerEvent: {}
+[5.041596] (-) TimerEvent: {}
+[5.142119] (-) TimerEvent: {}
+[5.245090] (-) TimerEvent: {}
+[5.346096] (-) TimerEvent: {}
+[5.446773] (-) TimerEvent: {}
+[5.549090] (-) TimerEvent: {}
+[5.649359] (-) TimerEvent: {}
+[5.749639] (-) TimerEvent: {}
+[5.763690] (ul_decision) StdoutLine: {'line': b'[100%] \x1b[1m\x1b[32mLinking CXX executable main\x1b[0m\n'}
+[5.849739] (-) TimerEvent: {}
+[5.950095] (-) TimerEvent: {}
+[6.047298] (ul_decision) StdoutLine: {'line': b'[100%] Built target main\n'}
+[6.050175] (-) TimerEvent: {}
+[6.052178] (ul_decision) CommandEnded: {'returncode': 0}
+[6.052742] (ul_decision) JobProgress: {'identifier': 'ul_decision', 'progress': 'install'}
+[6.055669] (ul_decision) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/bluemaple/learn_projects/try_ul/build/ul_decision'], 'cwd': '/home/bluemaple/learn_projects/try_ul/build/ul_decision', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'bluemaple'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bluemaple'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.111.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1524'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '4371'), ('BUNDLED_DEBUGPY_PATH', '/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5144'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/bluemaple/learn_projects/try_ul/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bluemaple'), ('JOURNAL_STREAM', '8:18635'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bluemaple'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/bluemaple/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/bluemaple/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/bluemaple-Legion-Y9000P-IAX10:@/tmp/.ICE-unix/4346,unix/bluemaple-Legion-Y9000P-IAX10:/tmp/.ICE-unix/4346'), ('INVOCATION_ID', 'ee4c2c634029465e9ef3cc32198f461c'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-deeffb52bfa2782c.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/bluemaple/.config/Code/User/workspaceStorage/f935d52ba4d6062298ec9a440e5db7e1/ms-python.python/pythonrc.py'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-3af1b0029d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/bluemaple/learn_projects/try_ul/install/ul_decision:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bluemaple/learn_projects/try_ul/build/ul_decision'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/bluemaple/learn_projects/try_ul/install/ul_decision:/opt/ros/humble')]), 'shell': False}
+[6.058260] (ul_decision) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.058389] (ul_decision) StdoutLine: {'line': b'-- Installing: /home/bluemaple/learn_projects/try_ul/install/ul_decision/lib/ul_decision/main\n'}
+[6.060073] (ul_decision) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/bluemaple/learn_projects/try_ul/install/ul_decision/lib/ul_decision/main" to ""\n'}
+[6.060230] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/param\n'}
+[6.060265] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/param/decision_tree.xml\n'}
+[6.060292] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/package_run_dependencies/ul_decision\n'}
+[6.060317] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/parent_prefix_path/ul_decision\n'}
+[6.060340] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/ament_prefix_path.sh\n'}
+[6.060362] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/ament_prefix_path.dsv\n'}
+[6.060383] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/path.sh\n'}
+[6.060403] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/path.dsv\n'}
+[6.060427] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.bash\n'}
+[6.060447] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.sh\n'}
+[6.060467] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.zsh\n'}
+[6.060487] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.dsv\n'}
+[6.060507] (ul_decision) StdoutLine: {'line': b'-- Installing: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/package.dsv\n'}
+[6.060527] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/packages/ul_decision\n'}
+[6.060547] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/cmake/ul_decisionConfig.cmake\n'}
+[6.060586] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/cmake/ul_decisionConfig-version.cmake\n'}
+[6.060611] (ul_decision) StdoutLine: {'line': b'-- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/package.xml\n'}
+[6.062451] (ul_decision) CommandEnded: {'returncode': 0}
+[6.071625] (ul_decision) JobEnded: {'identifier': 'ul_decision', 'rc': 0}
+[6.071971] (-) EventReactorShutdown: {}

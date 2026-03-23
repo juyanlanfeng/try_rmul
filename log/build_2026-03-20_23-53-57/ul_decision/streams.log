@@ -1,0 +1,27 @@
+[0.007s] Invoking command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/bluemaple/learn_projects/try_ul/build/ul_decision -- -j24 -l24
+[0.032s] [ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[6.815s] [100%] [1m[32mLinking CXX executable main[0m
+[7.134s] [100%] Built target main
+[7.140s] Invoked command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/bluemaple/learn_projects/try_ul/build/ul_decision -- -j24 -l24
+[7.147s] Invoking command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/bluemaple/learn_projects/try_ul/build/ul_decision
+[7.149s] -- Install configuration: ""
+[7.153s] -- Installing: /home/bluemaple/learn_projects/try_ul/install/ul_decision/lib/ul_decision/main
+[7.153s] -- Set non-toolchain portion of runtime path of "/home/bluemaple/learn_projects/try_ul/install/ul_decision/lib/ul_decision/main" to ""
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/param
+[7.153s] -- Installing: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/param/decision_tree.xml
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/package_run_dependencies/ul_decision
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/parent_prefix_path/ul_decision
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/ament_prefix_path.sh
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/ament_prefix_path.dsv
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/path.sh
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/path.dsv
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.bash
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.sh
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.zsh
+[7.153s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.dsv
+[7.153s] -- Installing: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/package.dsv
+[7.155s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/packages/ul_decision
+[7.155s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/cmake/ul_decisionConfig.cmake
+[7.155s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/cmake/ul_decisionConfig-version.cmake
+[7.155s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/package.xml
+[7.156s] Invoked command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/bluemaple/learn_projects/try_ul/build/ul_decision

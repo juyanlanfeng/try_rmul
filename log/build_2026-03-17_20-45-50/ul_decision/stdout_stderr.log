@@ -1,0 +1,23 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/Condition/GameStart.cpp.o[0m
+In file included from [01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/plugins/Condition/GameStart.cpp:1[m[K:
+[01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/include/ul_decision/GameStart.hpp:20:14:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kul_decision::GameStart::[m[K’ on member ‘[01m[KGameStart_callback[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   20 |         void [01;31m[KGameStart[m[K::GameStart_callback(const std_msgs::msg::Bool::SharedPtr msg);
+      |              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/plugins/Condition/GameStart.cpp:[m[K In constructor ‘[01m[Kul_decision::GameStart::GameStart(const string&, const BT::NodeConfiguration&)[m[K’:
+[01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/plugins/Condition/GameStart.cpp:14:42:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid ul_decision::GameStart::GameStart_callback(std_msgs::msg::Bool_<std::allocator<void> >::SharedPtr)[m[K’
+   14 |             "/game_start", 10, std::bind([01;31m[KGameStart_callback[m[K, this, std::placeholders::_1));
+      |                                          [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/plugins/Condition/GameStart.cpp:1[m[K:
+[01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/include/ul_decision/GameStart.hpp:20:14:[m[K [01;36m[Knote: [m[Kdeclared here
+   20 |         void [01;36m[KGameStart[m[K::GameStart_callback(const std_msgs::msg::Bool::SharedPtr msg);
+      |              [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:6[m[K:
+[01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/include/ul_decision/GameStart.hpp:20:14:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kul_decision::GameStart::[m[K’ on member ‘[01m[KGameStart_callback[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   20 |         void [01;31m[KGameStart[m[K::GameStart_callback(const std_msgs::msg::Bool::SharedPtr msg);
+      |              [01;31m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/main.dir/build.make:93：CMakeFiles/main.dir/plugins/Condition/GameStart.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/main.dir/build.make:79：CMakeFiles/main.dir/src/main.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:153：CMakeFiles/main.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

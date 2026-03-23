@@ -1,0 +1,31 @@
+[0.008s] Invoking command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/bluemaple/learn_projects/try_ul/build/ul_decision -- -j24 -l24
+[0.052s] [ 33%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[0.053s] [ 66%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/Condition/GameStart.cpp.o[0m
+[3.822s] [01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/plugins/Condition/GameStart.cpp:19:26:[m[K [01;35m[Kwarning: [m[K‘[01m[KBT::PortsList ul_decision::providedPorts()[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[3.822s]    19 |     static BT::PortsList [01;35m[KprovidedPorts[m[K()
+[3.822s]       |                          [01;35m[K^~~~~~~~~~~~~[m[K
+[6.673s] [100%] [1m[32mLinking CXX executable main[0m
+[7.014s] [100%] Built target main
+[7.023s] Invoked command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/bluemaple/learn_projects/try_ul/build/ul_decision -- -j24 -l24
+[7.029s] Invoking command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/bluemaple/learn_projects/try_ul/build/ul_decision
+[7.032s] -- Install configuration: ""
+[7.032s] -- Installing: /home/bluemaple/learn_projects/try_ul/install/ul_decision/lib/ul_decision/main
+[7.035s] -- Set non-toolchain portion of runtime path of "/home/bluemaple/learn_projects/try_ul/install/ul_decision/lib/ul_decision/main" to ""
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/param
+[7.035s] -- Installing: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/param/decision_tree.xml
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/package_run_dependencies/ul_decision
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/parent_prefix_path/ul_decision
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/ament_prefix_path.sh
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/ament_prefix_path.dsv
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/path.sh
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/environment/path.dsv
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.bash
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.sh
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.zsh
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/local_setup.dsv
+[7.035s] -- Installing: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/package.dsv
+[7.035s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ament_index/resource_index/packages/ul_decision
+[7.036s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/cmake/ul_decisionConfig.cmake
+[7.036s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/cmake/ul_decisionConfig-version.cmake
+[7.036s] -- Up-to-date: /home/bluemaple/learn_projects/try_ul/install/ul_decision/share/ul_decision/package.xml
+[7.037s] Invoked command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --install /home/bluemaple/learn_projects/try_ul/build/ul_decision

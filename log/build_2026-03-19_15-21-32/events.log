@@ -1,0 +1,105 @@
+[0.000000] (-) TimerEvent: {}
+[0.000363] (ul_decision) JobQueued: {'identifier': 'ul_decision', 'dependencies': OrderedDict()}
+[0.000394] (ul_decision) JobStarted: {'identifier': 'ul_decision'}
+[0.004714] (ul_decision) JobProgress: {'identifier': 'ul_decision', 'progress': 'cmake'}
+[0.005272] (ul_decision) JobProgress: {'identifier': 'ul_decision', 'progress': 'build'}
+[0.005304] (ul_decision) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/bluemaple/learn_projects/try_ul/build/ul_decision', '--', '-j24', '-l24'], 'cwd': '/home/bluemaple/learn_projects/try_ul/build/ul_decision', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'bluemaple'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bluemaple'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.111.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1569'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '4966'), ('BUNDLED_DEBUGPY_PATH', '/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6181'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bluemaple'), ('JOURNAL_STREAM', '8:32594'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bluemaple'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/bluemaple/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/bluemaple/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('SESSION_MANAGER', 'local/bluemaple-Legion-Y9000P-IAX10:@/tmp/.ICE-unix/4943,unix/bluemaple-Legion-Y9000P-IAX10:/tmp/.ICE-unix/4943'), ('INVOCATION_ID', '07baa88271d841c99cd812fd30362787'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/bluemaple/.vscode/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-deeffb52bfa2782c.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/bluemaple/.config/Code/User/workspaceStorage/f935d52ba4d6062298ec9a440e5db7e1/ms-python.python/pythonrc.py'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-3af1b0029d.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/bluemaple/learn_projects/try_ul/build/ul_decision'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.035227] (ul_decision) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o\x1b[0m\n'}
+[0.099917] (-) TimerEvent: {}
+[0.200709] (-) TimerEvent: {}
+[0.301293] (-) TimerEvent: {}
+[0.402795] (-) TimerEvent: {}
+[0.503168] (-) TimerEvent: {}
+[0.603502] (-) TimerEvent: {}
+[0.704795] (-) TimerEvent: {}
+[0.805044] (-) TimerEvent: {}
+[0.905404] (-) TimerEvent: {}
+[1.005783] (-) TimerEvent: {}
+[1.106137] (-) TimerEvent: {}
+[1.206528] (-) TimerEvent: {}
+[1.306948] (-) TimerEvent: {}
+[1.407445] (-) TimerEvent: {}
+[1.472195] (ul_decision) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/action_node.h:17\x1b[m\x1b[K,\n'}
+[1.472364] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/behavior_tree.h:28\x1b[m\x1b[K,\n'}
+[1.472397] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/bt_factory.h:25\x1b[m\x1b[K,\n'}
+[1.472422] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:1\x1b[m\x1b[K:\n'}
+[1.472445] (ul_decision) StderrLine: {'line': b'/usr/include/c++/11/atomic: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kstruct std::atomic<std::__cxx11::basic_string<char> >\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.472467] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:189:30:\x1b[m\x1b[K   required from here\n'}
+[1.472487] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/atomic:211:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: std::atomic requires a trivially copyable type\n'}
+[1.472509] (ul_decision) StderrLine: {'line': b'  211 |       static_assert(\x1b[01;31m\x1b[K__is_trivially_copyable(_Tp)\x1b[m\x1b[K,\n'}
+[1.472529] (ul_decision) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.472549] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/atomic:211:21:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfalse\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[1.474241] (ul_decision) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[1.474328] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.477058] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[1.477096] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.477126] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[1.477153] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.477179] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.477205] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[1.477231] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[1.477257] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.477283] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[1.477308] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:2\x1b[m\x1b[K:\n'}
+[1.477333] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual BT::NodeStatus GetToPosition::onStart()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.477361] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:163:42:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%s\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.477391] (ul_decision) StderrLine: {'line': b'  163 |         RCLCPP_INFO(node_->get_logger(), \x1b[01;35m\x1b[K"\xe5\xbc\x80\xe5\xa7\x8b\xe5\x89\x8d\xe5\xbe\x80%s"\x1b[m\x1b[K, \x1b[32m\x1b[Ktarget_position.load()\x1b[m\x1b[K);\n'}
+[1.477421] (ul_decision) StderrLine: {'line': b'      |                                          \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.477448] (ul_decision) StderrLine: {'line': b'      |                                                                            \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[1.477474] (ul_decision) StderrLine: {'line': b'      |                                                                            \x1b[32m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\n'}
+[1.477499] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:163:52:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[1.477526] (ul_decision) StderrLine: {'line': b'  163 |         RCLCPP_INFO(node_->get_logger(), "\xe5\xbc\x80\xe5\xa7\x8b\xe5\x89\x8d\xe5\xbe\x80\x1b[01;36m\x1b[K%s\x1b[m\x1b[K", target_position.load());\n'}
+[1.477560] (ul_decision) StderrLine: {'line': b'      |                                                   \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[1.477590] (ul_decision) StderrLine: {'line': b'      |                                                    \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[1.477618] (ul_decision) StderrLine: {'line': b'      |                                                    \x1b[01;36m\x1b[Kchar*\x1b[m\x1b[K\n'}
+[1.477646] (ul_decision) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[1.477673] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[1.477699] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[1.477725] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[1.477758] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[1.477786] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[1.477812] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[1.477837] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[1.477862] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[1.477887] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[1.477911] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[1.477935] (ul_decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:2\x1b[m\x1b[K:\n'}
+[1.477960] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual BT::NodeStatus GetToPosition::onRunning()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.477985] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:171:46:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%s\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.478013] (ul_decision) StderrLine: {'line': b'  171 |             RCLCPP_INFO(node_->get_logger(), \x1b[01;35m\x1b[K"\xe6\xad\xa3\xe5\x9c\xa8\xe5\x89\x8d\xe5\xbe\x80%s"\x1b[m\x1b[K, \x1b[32m\x1b[Ktarget_position.load()\x1b[m\x1b[K);\n'}
+[1.478040] (ul_decision) StderrLine: {'line': b'      |                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.478064] (ul_decision) StderrLine: {'line': b'      |                                                                                \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[1.478089] (ul_decision) StderrLine: {'line': b'      |                                                                                \x1b[32m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\n'}
+[1.478115] (ul_decision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/src/main.cpp:171:56:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[1.478139] (ul_decision) StderrLine: {'line': b'  171 |             RCLCPP_INFO(node_->get_logger(), "\xe6\xad\xa3\xe5\x9c\xa8\xe5\x89\x8d\xe5\xbe\x80\x1b[01;36m\x1b[K%s\x1b[m\x1b[K", target_position.load());\n'}
+[1.478163] (ul_decision) StderrLine: {'line': b'      |                                                       \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[1.478187] (ul_decision) StderrLine: {'line': b'      |                                                        \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[1.478211] (ul_decision) StderrLine: {'line': b'      |                                                        \x1b[01;36m\x1b[Kchar*\x1b[m\x1b[K\n'}
+[1.509791] (-) TimerEvent: {}
+[1.610030] (-) TimerEvent: {}
+[1.710299] (-) TimerEvent: {}
+[1.810550] (-) TimerEvent: {}
+[1.910790] (-) TimerEvent: {}
+[2.011037] (-) TimerEvent: {}
+[2.111285] (-) TimerEvent: {}
+[2.212875] (-) TimerEvent: {}
+[2.313111] (-) TimerEvent: {}
+[2.413354] (-) TimerEvent: {}
+[2.513682] (-) TimerEvent: {}
+[2.615295] (-) TimerEvent: {}
+[2.715555] (-) TimerEvent: {}
+[2.815790] (-) TimerEvent: {}
+[2.916422] (-) TimerEvent: {}
+[3.016668] (-) TimerEvent: {}
+[3.118881] (-) TimerEvent: {}
+[3.219127] (-) TimerEvent: {}
+[3.319381] (-) TimerEvent: {}
+[3.419634] (-) TimerEvent: {}
+[3.519890] (-) TimerEvent: {}
+[3.620141] (-) TimerEvent: {}
+[3.667931] (ul_decision) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/main.dir/build.make:79\xef\xbc\x9aCMakeFiles/main.dir/src/main.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[3.668140] (ul_decision) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:153\xef\xbc\x9aCMakeFiles/main.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[3.668759] (ul_decision) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[3.671488] (ul_decision) CommandEnded: {'returncode': 2}
+[3.677757] (ul_decision) JobEnded: {'identifier': 'ul_decision', 'rc': 2}
+[3.690145] (-) EventReactorShutdown: {}

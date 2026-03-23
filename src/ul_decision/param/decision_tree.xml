@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="3" main_tree_to_execute="main_tree">
+    <BehaviorTree ID="main_tree">
+        <ReactiveSequence>
+            <GameStart get_start="{game_start}" update_start="{game_start}"/>
+            <UpdateStatus add_blood="{add_blood}" control_area="{control_area}" protect_pos="{protect_pos}" attack_pos="{attack_pos}" idle_area="{idle_area}" hp_status="{hp_status}" teammate_status="{teammate_status}" mate_hp_status="{mate_hp_status}" is_attacked="{is_attacked}" game_process="{game_process}" enermy_approach="{enermy_approach}"/>
+            <WhileDoElse>
+                <CheckStatus get_status="{game_process}"/>
+                <SubTree ID="early_process" __shared_blackboard="true"/>
+                <SubTree ID="late_process" __shared_blackboard="true"/>
+            </WhileDoElse>
+        </ReactiveSequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="early_process">
+        <WhileDoElse>
+            <CheckStatus get_status="{hp_status}"/>
+            <GetToPosition go_position="{add_blood}"/>
+            <WhileDoElse>
+                <CheckStatus get_status="{teammate_status}"/>
+                <GetToPosition go_position="{control_area}"/>
+                <WhileDoElse>
+                    <CheckStatus get_status="{mate_hp_status}"/>
+                    <GetToPosition go_position="{protect_pos}"/>
+                    <WhileDoElse>
+                        <CheckStatus get_status="{is_attacked}"/>
+                        <GetToPosition go_position="{attack_pos}"/>
+                        <GetToPosition go_position="{idle_area}"/>
+                    </WhileDoElse>
+                </WhileDoElse>
+            </WhileDoElse>
+        </WhileDoElse>
+    </BehaviorTree>
+
+    <BehaviorTree ID="late_process">
+        <WhileDoElse>
+            <CheckStatus get_status="{hp_status}"/>
+            <GetToPosition go_position="{add_blood}"/>
+            <WhileDoElse>
+                <CheckStatus get_status="{enermy_approach}"/>
+                <GetToPosition go_position="{attack_pos}"/>
+                <WhileDoElse>
+                    <CheckStatus get_status="{mate_hp_status}"/>
+                    <GetToPosition go_position="{protect_pos}"/>
+                    <WhileDoElse>
+                        <CheckStatus get_status="{teammate_status}"/>
+                        <GetToPosition go_position="{control_area}"/>
+                        <GetToPosition go_position="{idle_area}"/>
+                    </WhileDoElse>
+                </WhileDoElse>
+            </WhileDoElse>
+        </WhileDoElse>
+    </BehaviorTree>
+
+    <TreeNodesModel>
+
+        <Condition ID="GameStart">
+            <input_port name="get_start">whether the game started</input_port>
+            <output_port name="update_start">update the game process</output_port>
+        </Condition>
+
+        <Condition ID="CheckStatus">
+            <input_port name="get_status">the status of a factor</input_port>
+        </Condition>
+
+        <Action ID="UpdateStatus">
+            <output_port name="add_blood">the position of home</output_port>
+            <output_port name="control_area">the position of control area</output_port>
+            <output_port name="protect_pos">protect position</output_port>
+            <output_port name="attack_pos">attack position</output_port>
+            <output_port name="idle_area">idle area</output_port>
+            <output_port name="hp_status">health status</output_port>
+            <output_port name="teammate_status">teammate status</output_port>
+            <output_port name="mate_hp_status">teammate hp status</output_port>
+            <output_port name="is_attacked">whether attacked</output_port>
+            <output_port name="game_process">game process</output_port>
+            <output_port name="enermy_approach">game process</output_port>
+        </Action>
+
+        <Action ID="GetToPosition">
+            <input_port name="go_position">position to go</input_port>
+        </Action>
+
+    </TreeNodesModel>
+</root>

@@ -109,11 +109,11 @@ public:
 
     static BT::PortsList providedPorts() {
         return {
-            BT::OutputPort<std::string>("add_blood"),
-            BT::OutputPort<std::string>("control_area"),
-            BT::OutputPort<std::string>("protect_pos"),
-            BT::OutputPort<std::string>("attack_pos"),
-            BT::OutputPort<std::string>("idle_area"),
+            // BT::OutputPort<std::string>("add_blood"),
+            // BT::OutputPort<std::string>("control_area"),
+            // BT::OutputPort<std::string>("protect_pos"),
+            // BT::OutputPort<std::string>("attack_pos"),
+            // BT::OutputPort<std::string>("idle_area"),
             BT::OutputPort<bool>("hp_status"),
             BT::OutputPort<bool>("teammate_status"),
             BT::OutputPort<bool>("mate_hp_status"),
@@ -242,13 +242,13 @@ public:
 
     static BT::PortsList providedPorts() {
         return {
-            BT::InputPort<std::string>("go_position")
+            // BT::InputPort<std::string>("go_position")
         }; 
     }
 
     BT::NodeStatus onStart() override
     {
-        std::string temp_pos;
+        // std::string temp_pos;
         getInput("go_position", temp_pos);
         {
             std::lock_guard<std::mutex> lock(target_mutex);
@@ -260,13 +260,14 @@ public:
 
     BT::NodeStatus onRunning() override
     {
+        // 在这里加上当前位置的判断
         // 每50次tick输出一次，避免刷屏
         if (ticks % 50 == 0) {
-            std::string temp_pos;
-            {
-                std::lock_guard<std::mutex> lock(target_mutex);
-                temp_pos = target_position;
-            }
+            // std::string temp_pos;
+            // {
+            //     std::lock_guard<std::mutex> lock(target_mutex);
+            //     temp_pos = target_position;
+            // }
             RCLCPP_INFO(node_->get_logger(), "正在前往%s", temp_pos.c_str());
         }
         ticks++;
@@ -281,19 +282,19 @@ public:
 
     void onHalted() override
     {
-        std::string temp_pos;
-        {
-            std::lock_guard<std::mutex> lock(target_mutex);
-            temp_pos = target_position;
-        }
-        std::cout << "前往" << temp_pos << "的进程被打断" << std::endl; // 待定
+        // std::string temp_pos;
+        // {
+        //     std::lock_guard<std::mutex> lock(target_mutex);
+        //     temp_pos = target_position;
+        // }
+        // std::cout << "前往" << temp_pos << "的进程被打断" << std::endl; // 待定
     }
 private:
     static int ticks; // 模拟耗时前往目标点
     rclcpp::Node::SharedPtr node_;
 
-    std::string target_position;          // 改为普通 std::string
-    mutable std::mutex target_mutex;       // 互斥锁，mutable 允许在 const 成员函数中加锁
+    // std::string target_position;          // 改为普通 std::string
+    // mutable std::mutex target_mutex;       // 互斥锁，mutable 允许在 const 成员函数中加锁
 };
 int GetToPosition::ticks = 0; // 类外初始化ticks为0
 

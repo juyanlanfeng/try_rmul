@@ -1,8 +1,0 @@
-source;share/ul_decision/hook/cmake_prefix_path.ps1
-source;share/ul_decision/hook/cmake_prefix_path.dsv
-source;share/ul_decision/hook/cmake_prefix_path.sh
-source;share/ul_decision/local_setup.bash
-source;share/ul_decision/local_setup.dsv
-source;share/ul_decision/local_setup.ps1
-source;share/ul_decision/local_setup.sh
-source;share/ul_decision/local_setup.zsh

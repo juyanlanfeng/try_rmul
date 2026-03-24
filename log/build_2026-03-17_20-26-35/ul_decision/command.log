@@ -1,4 +1,0 @@
-Invoking command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/bluemaple/learn_projects/try_ul/build/ul_decision -- -j24 -l24
-Invoked command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/bluemaple/learn_projects/try_ul/build/ul_decision -- -j24 -l24
-Invoking command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/bluemaple/learn_projects/try_ul/build/ul_decision
-Invoked command in '/home/bluemaple/learn_projects/try_ul/build/ul_decision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/bluemaple/learn_projects/try_ul/build/ul_decision

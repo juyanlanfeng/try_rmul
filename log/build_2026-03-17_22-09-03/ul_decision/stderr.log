@@ -1,9 +1,0 @@
-[01m[K/home/bluemaple/learn_projects/try_ul/src/ul_decision/plugins/Condition/GameStart.cpp:19:26:[m[K [01;35m[Kwarning: [m[K‘[01m[KBT::PortsList ul_decision::providedPorts()[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
-   19 |     static BT::PortsList [01;35m[KprovidedPorts[m[K()
-      |                          [01;35m[K^~~~~~~~~~~~~[m[K
-/usr/bin/ld: CMakeFiles/main.dir/src/main.cpp.o: in function `std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, BT::PortInfo, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, BT::PortInfo> > > BT::getProvidedPorts<ul_decision::GameStart>(std::enable_if<BT::has_static_method_providedPorts<ul_decision::GameStart, void>::value, void>::type*)':
-main.cpp:(.text._ZN2BT16getProvidedPortsIN11ul_decision9GameStartEEESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8PortInfoESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEPNSt9enable_ifIXsrNS_31has_static_method_providedPortsIT_vEE5valueEvE4typeE[_ZN2BT16getProvidedPortsIN11ul_decision9GameStartEEESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_8PortInfoESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEPNSt9enable_ifIXsrNS_31has_static_method_providedPortsIT_vEE5valueEvE4typeE]+0x2b): undefined reference to `ul_decision::GameStart::providedPorts[abi:cxx11]()'
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/main.dir/build.make:179：main] 错误 1
-gmake[1]: *** [CMakeFiles/Makefile2:153：CMakeFiles/main.dir/all] 错误 2
-gmake: *** [Makefile:146：all] 错误 2

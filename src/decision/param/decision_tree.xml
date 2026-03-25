@@ -3,32 +3,87 @@
     <BehaviorTree ID="main_tree">
         <ReactiveSequence>
             <GameStart get_start="{game_start}" update_start="{game_start}"/>
-            <UpdateStatus add_blood="{add_blood}" 
-                          control_area="{control_area}" 
-                          protect_pos="{protect_pos}" 
-                          attack_pos="{attack_pos}" 
-                          idle_area="{idle_area}" 
-                          current_pos="{current_pos}"
-                          hp_status="{hp_status}" 
-                          teammate_status="{teammate_status}" 
-                          mate_hp_status="{mate_hp_status}" 
-                          enermy_approach="{enermy_approach}" 
-                          ctlarea_status="{ctlarea_status}"/>
-            <ReactiveSequence>
-                <GetToPosition go_position="{pos_1}"/>
-                <Switch3 variable="{ctlarea_status}" case_1=1 case_2=2 case_3=3>
-
-            </ReactiveSequence>
+            <UpdateStatus hp_status="{hp_status}"
+                          ctlarea_status="{ctlarea_status}"
+                          enermy_observed="{enermy_observed}"
+                          enermy_onhighland="{enermy_onhighland}"
+                          add_blood="{add_blood}"
+                          pos_1="{pos_1}"
+                          pos_2="{pos_2}"
+                          pos_3="{pos_3}"
+                          pos_4="{pos_2}"
+                          pos_5="{pos_5}"
+                          attack_pos="{attack_pos}"
+                          idle_pos="{idle_pos}"/>
+            <WhileDoElse>
+                <CheckStatus get_status="{hp_status}"/>
+                <GetToPosition target_position="{add_blood}"/>
+                <ReactiveSequence>
+                    <GetToPosition target_position="{pos_1}"/>
+                    <Switch3 variable="{ctlarea_status}" case_1="1" case_2="2" case_3="3">
+                        <SubTree ID="enermy_control" __shared_blackboard="true"/>
+                        <SubTree ID="myteam_control" __shared_blackboard="true"/>
+                        <SubTree ID="none_control" __shared_blackboard="true"/>
+                        <GetToPosition target_position="{idle_pos}"/>
+                    </Switch3>
+                </ReactiveSequence>
+            </WhileDoElse>
         </ReactiveSequence>
     </BehaviorTree>
 
     <BehaviorTree ID="enermy_control">
         <ReactiveSequence>
-            <GetToPosition go_position="{pos_2}"/>
+            <GetToPosition target_position="{pos_2}"/>
             <WhileDoElse>
-                
+                <CheckStatus get_status="{enermy_observed}"/>
+                <GetToPosition target_position="{attack_pos}"/>
+                <GetToPosition target_position="{idle_pos}"/>
             </WhileDoElse>
         </ReactiveSequence>
+    </BehaviorTree>
+
+    <BehaviorTree ID="myteam_control">
+        <WhileDoElse>
+            <CheckStatus get_status="{enermy_onhighland}"/>
+            <ReactiveSequence>
+                <GetToPosition target_position="{pos_4}"/>
+                <WhileDoElse>
+                    <CheckStatus get_status="{enermy_observed}"/>
+                    <GetToPosition target_position="{attack_pos}"/>
+                    <GetToPosition target_position="{idle_pos}"/>
+                </WhileDoElse>
+            </ReactiveSequence>
+            <ReactiveSequence>
+                <GetToPosition target_position="{pos_3}"/>
+                <WhileDoElse>
+                    <CheckStatus get_status="{enermy_observed}"/>
+                    <GetToPosition target_position="{attack_pos}"/>
+                    <GetToPosition target_position="{idle_pos}"/>
+                </WhileDoElse>
+            </ReactiveSequence>
+        </WhileDoElse>
+    </BehaviorTree>
+
+    <BehaviorTree ID="none_control">
+        <WhileDoElse>
+            <CheckStatus get_status="{enermy_onhighland}"/>
+            <ReactiveSequence>
+                <GetToPosition target_position="{pos_4}"/>
+                <WhileDoElse>
+                    <CheckStatus get_status="{enermy_observed}"/>
+                    <GetToPosition target_position="{attack_pos}"/>
+                    <GetToPosition target_position="{idle_pos}"/>
+                </WhileDoElse>
+            </ReactiveSequence>
+            <ReactiveSequence>
+                <GetToPosition target_position="{pos_5}"/>
+                <WhileDoElse>
+                    <CheckStatus get_status="{enermy_observed}"/>
+                    <GetToPosition target_position="{attack_pos}"/>
+                    <GetToPosition target_position="{idle_pos}"/>
+                </WhileDoElse>
+            </ReactiveSequence>
+        </WhileDoElse>
     </BehaviorTree>
 
     <TreeNodesModel>
@@ -43,20 +98,24 @@
         </Condition>
 
         <Action ID="UpdateStatus">
+            <!-- 各种状态 -->
+            <output_port name="hp_status">hp status</output_port>
+            <output_port name="ctlarea_status">who takes the control area, 1:enermy 2:me 3:none</output_port>
+            <output_port name="enermy_observed">enermy observed</output_port>
+            <output_port name="enermy_onhighland">whether enermy on highland</output_port>
+            <!-- 各种位置 -->
             <output_port name="add_blood">the position of home</output_port>
-            <output_port name="control_area">the position of control area</output_port>
-            <output_port name="protect_pos">protect position</output_port>
-            <output_port name="attack_pos">attack position</output_port>
-            <output_port name="idle_area">idle area</output_port>
-            <output_port name="current_pos">where am I</output_port>
-            <output_port name="hp_status">health status</output_port>
-            <output_port name="teammate_status">teammate status</output_port>
-            <output_port name="mate_hp_status">teammate hp status</output_port>
-            <output_port name="enermy_approach">game process</output_port>
+            <output_port name="pos_1">pos 1</output_port>
+            <output_port name="pos_2">pos 2</output_port>
+            <output_port name="pos_3">pos 3</output_port>
+            <output_port name="pos_4">pos 4</output_port>
+            <output_port name="pos_5">pos 5</output_port>
+            <output_port name="attack_pos">attack pos</output_port>
+            <output_port name="idle_pos">idle pos</output_port>
         </Action>
 
         <Action ID="GetToPosition">
-            <input_port name="go_position">position to go</input_port>
+            <input_port name="target_position">position to go</input_port>
         </Action>
 
     </TreeNodesModel>

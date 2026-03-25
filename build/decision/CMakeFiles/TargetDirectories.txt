@@ -1,0 +1,10 @@
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/uninstall.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/decision_uninstall.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/main.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/test.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/edit_cache.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/rebuild_cache.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/list_install_components.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/install.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/install/local.dir
+/home/bluemaple/try_rmul/build/decision/CMakeFiles/install/strip.dir

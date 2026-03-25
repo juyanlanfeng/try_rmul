@@ -2,10 +2,13 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/bool.hpp"
 #include "std_msgs/msg/float32.hpp"
-#include <atomic> // 用于线程安全的标志
-#include <mutex>
-#include <string>
+#include "std_msgs/msg/int16.hpp"
 #include <behaviortree_cpp_v3/action_node.h>
+
+#include <atomic> // 用于线程安全的标志
+#include <vector>
+
+std::vector<double> current_position = {-1.0, -1.0};
 
 class GameStart : public BT::ConditionNode
 {
@@ -57,150 +60,143 @@ public:
     UpdateStatus(const std::string& action_name, const BT::NodeConfiguration& conf)
       : BT::SyncActionNode(action_name, conf) 
     {
-        cur_hp_.store(400.0); // 初始状态为满血
-        pre_hp_.store(400.0);
-        teammate_status_.store(false); // 开始时控制区没有队友
-        game_process_.store(true); // 默认上半场
-        enermy_approach_.store(false); // 默认没有敌人
-
         node_ = config().blackboard->get<rclcpp::Node::SharedPtr>("node");
+
+        node_->declare_parameter<std::vector<double>>("add_blood", {0.0, 0.0});
+        node_->declare_parameter<std::vector<double>>("pos1", {1.0, 1.0});
+        node_->declare_parameter<std::vector<double>>("pos2", {2.0, 2.0});
+        node_->declare_parameter<std::vector<double>>("pos3", {3.0, 3.0});
+        node_->declare_parameter<std::vector<double>>("pos4", {4.0, 4.0});
+        node_->declare_parameter<std::vector<double>>("pos5", {5.0, 5.0});
+        node_->declare_parameter<std::vector<double>>("attack_pos", {0.0, 0.0});
+        node_->declare_parameter<std::vector<double>>("idle_pos", {0.0, 0.0});
+
+        node_->declare_parameter<double>("max_blood", 400.0);
+        node_->declare_parameter<double>("min_blood", 200.0);
+
+        add_blood_ = node_->get_parameter("add_blood").as_double_array();
+        pos_1_ = node_->get_parameter("pos1").as_double_array();
+        pos_2_ = node_->get_parameter("pos2").as_double_array();
+        pos_3_ = node_->get_parameter("pos3").as_double_array();
+        pos_4_ = node_->get_parameter("pos4").as_double_array();
+        pos_5_ = node_->get_parameter("pos5").as_double_array();
+        attack_pos_ = node_->get_parameter("attack_pos").as_double_array();
+        idle_pos_ = node_->get_parameter("idle_pos").as_double_array();
+
+        max_hp_ = node_->get_parameter("max_blood").as_double();
+        min_hp_ = node_->get_parameter("min_blood").as_double();
+
         cur_hp_sub_ = node_->create_subscription<std_msgs::msg::Float32>(
             "/cur_hp", 10, std::bind(&UpdateStatus::cur_hp_callback, this, std::placeholders::_1));
-        teammate_at_center_sub_ = node_->create_subscription<std_msgs::msg::Bool>(
-            "/teammate_at_center", 10, std::bind(&UpdateStatus::Teammate_callback, this, std::placeholders::_1));
-        teammate_hp_sub_ = node_->create_subscription<std_msgs::msg::Float32>(
-            "/center_teammate_hp", 10, std::bind(&UpdateStatus::Teammate_hp_callback, this, std::placeholders::_1));
-        game_process_sub_ = node_->create_subscription<std_msgs::msg::Float32>(
-            "/game_process", 10, std::bind(&UpdateStatus::game_process_callback, this, std::placeholders::_1));
-        enermy_approach_sub_ = node_->create_subscription<std_msgs::msg::Bool>(
-            "/enermy_approach", 10, std::bind(&UpdateStatus::enermy_approach_callback, this, std::placeholders::_1));
+        ctlarea_status_sub_ = node_->create_subscription<std_msgs::msg::Int16>(
+            "/ctlarea_status", 10, std::bind(&UpdateStatus::ctlarea_status_callback, this, std::placeholders::_1));
+        enermy_observed_sub_ = node_->create_subscription<std_msgs::msg::Bool>(
+            "/enermy_observed", 10, std::bind(&UpdateStatus::enermy_observed_callback, this, std::placeholders::_1));
+        enermy_onhighland_sub_ = node_->create_subscription<std_msgs::msg::Bool>(
+            "/enermy_onhighland", 10, std::bind(&UpdateStatus::enermy_onhighland_callback, this, std::placeholders::_1));
     }
 
-    void cur_hp_callback(const std_msgs::msg::Float32::SharedPtr hp) {
-        pre_hp_.store(cur_hp_.load());
-        cur_hp_.store(hp->data);
-        RCLCPP_INFO(node_->get_logger(), "hp更改成功");
+    void cur_hp_callback(std_msgs::msg::Float32 hp_msg) {
+        cur_hp_.store(hp_msg.data);
+        RCLCPP_INFO(node_->get_logger(), "生命值更改成功");
     }
 
-    void Teammate_callback(const std_msgs::msg::Bool::SharedPtr teammate) {
-        teammate_status_.store(teammate->data);
-        RCLCPP_INFO(node_->get_logger(), "队友状态更改成功");
+    void ctlarea_status_callback(std_msgs::msg::Int16 ctl_msg) {
+        ctlarea_status_.store(ctl_msg.data);
+        RCLCPP_INFO(node_->get_logger(), "控制区状态更改成功");
     }
-
-    void Teammate_hp_callback(const std_msgs::msg::Float32::SharedPtr mate_hp) {
-        mate_cur_hp_.store(mate_hp->data);
-        RCLCPP_INFO(node_->get_logger(), "控制区队友hp更改成功");
-    }
-
-    void game_process_callback(const std_msgs::msg::Float32::SharedPtr process) {
-        if (process->data == 0.0) {
-            game_process_.store(true);
-        }
-        else {
-            game_process_.store(false);
-        }
-        RCLCPP_INFO(node_->get_logger(), "比赛进程更改成功");
-    }
-
-    void enermy_approach_callback(std_msgs::msg::Bool::SharedPtr enermy) {
-        enermy_approach_.store(enermy->data);
+    
+    void enermy_observed_callback(std_msgs::msg::Bool enermy_msg) {
+        enermy_observed_.store(enermy_msg.data);
         RCLCPP_INFO(node_->get_logger(), "敌人状态更改成功");
+    }
+
+    void enermy_onhighland_callback(std_msgs::msg::Bool highland_msg) {
+        enermy_onhighland_.store(highland_msg.data);
+        RCLCPP_INFO(node_->get_logger(), "高地状态更改成功");
     }
 
     static BT::PortsList providedPorts() {
         return {
-            // BT::OutputPort<std::string>("add_blood"),
-            // BT::OutputPort<std::string>("control_area"),
-            // BT::OutputPort<std::string>("protect_pos"),
-            // BT::OutputPort<std::string>("attack_pos"),
-            // BT::OutputPort<std::string>("idle_area"),
             BT::OutputPort<bool>("hp_status"),
-            BT::OutputPort<bool>("teammate_status"),
-            BT::OutputPort<bool>("mate_hp_status"),
-            BT::OutputPort<bool>("is_attacked"),
-            BT::OutputPort<bool>("game_process"),
-            BT::OutputPort<bool>("enermy_approach")
+            BT::OutputPort<std::string>("ctlarea_status"),
+            BT::OutputPort<bool>("enermy_observed"),
+            BT::OutputPort<bool>("enermy_onhighland"),
+            BT::OutputPort<std::vector<double>>("add_blood"),
+            BT::OutputPort<std::vector<double>>("pos_1"),
+            BT::OutputPort<std::vector<double>>("pos_2"),
+            BT::OutputPort<std::vector<double>>("pos_3"),
+            BT::OutputPort<std::vector<double>>("pos_4"),
+            BT::OutputPort<std::vector<double>>("pos_5"),
+            BT::OutputPort<std::vector<double>>("attack_pos"),
+            BT::OutputPort<std::vector<double>>("idle_pos")
         };
     }
 
     BT::NodeStatus tick() override
     {
+        setOutput("add_blood", add_blood_);
+        setOutput("pos_1", pos_1_);
+        setOutput("pos_2", pos_2_);
+        setOutput("pos_3", pos_3_);
+        setOutput("pos_4", pos_4_);
+        setOutput("pos_5", pos_5_);
+        setOutput("attack_pos", attack_pos_);
+        setOutput("idle_pos", idle_pos_);
 
-        if (game_process_.load()) {
-            this->danger_hp_ = 200.0;
-            this->mate_danger_hp_ = 150.0;
+        switch (ctlarea_status_.load()) {
+            case 1:
+                setOutput("ctlarea_status", "enermy_control");
+                break;
+            case 2:
+                setOutput("ctlarea_status", "myteam_control");
+                break;
+            case 3:
+                setOutput("ctlarea_status", "none_control");
+                break;
+            default:
+                setOutput("ctlarea_status", "default");
+                break;
         }
-        else {
-            this->danger_hp_ = 100.0;
-            this->mate_danger_hp_ = 100.0;
-        }
-
-        setOutput("add_blood", "add_blood");
-        setOutput("control_area", "control_area");
-        setOutput("protect_pos", "protect_pos");
-        setOutput("attack_pos", "attack_pos");
-        setOutput("idle_area", "idle_area");
-
-        if (cur_hp_.load() <= this->danger_hp_) {
+        
+        if (cur_hp_.load() <= this->min_hp_) {
             setOutput("hp_status", true);
         }
         else {
             setOutput("hp_status", false);
         }
 
-        if (teammate_status_.load()) {
-            setOutput("teammate_status", false);
+        if (enermy_observed_.load()) {
+            setOutput("enermy_observed", true);
         }
         else {
-            setOutput("teammate_status", true);
+            setOutput("enermy_observed", false);
         }
 
-        if (mate_cur_hp_.load() <= this->mate_danger_hp_) {
-            setOutput("mate_hp_status", true);
+        if (enermy_onhighland_.load()) {
+            setOutput("enermy_onhighland", true);
         }
         else {
-            setOutput("mate_hp_status", false);
-        }
-
-        if (cur_hp_.load() - pre_hp_.load() < 0) {
-            setOutput("is_attacked", true);
-        }
-        else {
-            setOutput("is_attacked", false);
-        }
-
-        if (game_process_.load()) {
-            setOutput("game_process", true);
-        }
-        else {
-            setOutput("game_process", false);
-        }
-
-        if (enermy_approach_.load()) {
-            setOutput("enermy_approach", true);
-        }
-        else {
-            setOutput("enermy_approach", false);
+            setOutput("enermy_onhighland", false);
         }
 
         return BT::NodeStatus::SUCCESS;
     }
 
 private:
-    double danger_hp_, mate_danger_hp_;
+    std::vector<double> add_blood_, pos_1_, pos_2_, pos_3_, pos_4_, pos_5_, attack_pos_, idle_pos_;
+    double min_hp_, max_hp_;
+    std::atomic<bool> hp_status_;
+    std::atomic<int> ctlarea_status_;
+    std::atomic<bool> enermy_observed_;
+    std::atomic<bool> enermy_onhighland_;
+    std::atomic<double> cur_hp_;
 
     rclcpp::Node::SharedPtr node_;
-    std::atomic<double> cur_hp_;
-    std::atomic<double> pre_hp_; // 用于检查是否扣血
-    std::atomic<bool> teammate_status_;
-    std::atomic<double> mate_cur_hp_;
-    std::atomic<bool> game_process_;
-    std::atomic<bool> enermy_approach_;
     rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr cur_hp_sub_; // 生命值
-    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr teammate_at_center_sub_; // 是否有队友在控制区(自己不算)
-    rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr teammate_hp_sub_; // 占领控制区的队友hp
-    rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr game_process_sub_; // 上半场 0 / 下半场 1
-    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr enermy_approach_sub_; // 敌人是否接近
+    rclcpp::Subscription<std_msgs::msg::Int16>::SharedPtr ctlarea_status_sub_; // 控制区状态
+    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr enermy_observed_sub_; // 是否发现敌人
+    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr enermy_onhighland_sub_; // 高地上是否有敌人
 };
 
 
@@ -242,33 +238,36 @@ public:
 
     static BT::PortsList providedPorts() {
         return {
-            // BT::InputPort<std::string>("go_position")
+            BT::InputPort<std::vector<double>>("target_position"),
+            BT::InputPort<std::vector<double>>("get_curpos"),
+            BT::OutputPort<std::vector<double>>("update_curpos")
         }; 
     }
 
     BT::NodeStatus onStart() override
     {
-        // std::string temp_pos;
-        getInput("go_position", temp_pos);
-        {
-            std::lock_guard<std::mutex> lock(target_mutex);
-            target_position = temp_pos;
-        }
-        RCLCPP_INFO(node_->get_logger(), "开始前往%s", target_position.c_str());
+        std::vector<double> temp_pos;
+        getInput("target_position", temp_pos);
+
+        target_pos_x_.store(temp_pos[0]);
+        target_pos_y_.store(temp_pos[1]);
+        RCLCPP_INFO(node_->get_logger(), "开始前往(x:%f y:%f)", target_pos_x_.load(), target_pos_y_.load());
+        
+        current_position[0] = -1.0;
+        current_position[1] = -1.0;
+
         return BT::NodeStatus::RUNNING;
     }
 
     BT::NodeStatus onRunning() override
     {
-        // 在这里加上当前位置的判断
+        // 判断当前位置
+        if (target_pos_x_.load() == current_position[0] && target_pos_y_.load() == current_position[1]) {
+            RCLCPP_INFO(node_->get_logger(), "已经到达(x:%f y:%f)", target_pos_x_.load(), target_pos_y_.load());
+        }
         // 每50次tick输出一次，避免刷屏
         if (ticks % 50 == 0) {
-            // std::string temp_pos;
-            // {
-            //     std::lock_guard<std::mutex> lock(target_mutex);
-            //     temp_pos = target_position;
-            // }
-            RCLCPP_INFO(node_->get_logger(), "正在前往%s", temp_pos.c_str());
+            RCLCPP_INFO(node_->get_logger(), "正在前往(x:%f y:%f)", target_pos_x_.load(), target_pos_y_.load());
         }
         ticks++;
         if (ticks <= 200) {
@@ -276,25 +275,22 @@ public:
         }
         else {
             ticks = 0;
+            RCLCPP_INFO(node_->get_logger(), "已经到达(x:%f y:%f)", target_pos_x_.load(), target_pos_y_.load());
+            current_position[0] = target_pos_x_.load();
+            current_position[1] = target_pos_y_.load();
             return BT::NodeStatus::SUCCESS;
         }
     }
 
     void onHalted() override
     {
-        // std::string temp_pos;
-        // {
-        //     std::lock_guard<std::mutex> lock(target_mutex);
-        //     temp_pos = target_position;
-        // }
-        // std::cout << "前往" << temp_pos << "的进程被打断" << std::endl; // 待定
+        RCLCPP_INFO(node_->get_logger(), "前往(x:%f y:%f)的进程被打断", target_pos_x_.load(), target_pos_y_.load());
     }
 private:
     static int ticks; // 模拟耗时前往目标点
     rclcpp::Node::SharedPtr node_;
 
-    // std::string target_position;          // 改为普通 std::string
-    // mutable std::mutex target_mutex;       // 互斥锁，mutable 允许在 const 成员函数中加锁
+    std::atomic<double> target_pos_x_, target_pos_y_;
 };
 int GetToPosition::ticks = 0; // 类外初始化ticks为0
 

@@ -1,0 +1,20 @@
+In file included from [01m[K/opt/ros/humble/include/behaviortree_cpp_v3/utils/safe_any.hpp:11[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp_v3/basic_types.h:14[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp_v3/tree_node.h:22[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp_v3/control_node.h:17[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp_v3/controls/parallel_node.h:17[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp_v3/behavior_tree.h:17[m[K,
+                 from [01m[K/opt/ros/humble/include/behaviortree_cpp_v3/bt_factory.h:25[m[K,
+                 from [01m[K/home/bluemaple/try_rmul/src/decision/src/main.cpp:1[m[K:
+/opt/ros/humble/include/behaviortree_cpp_v3/utils/any.hpp: In instantiation of ‘[01m[Klinb::any::any(ValueType&&) [with ValueType = const std::atomic<int>&; <template-parameter-1-2> = void][m[K’:
+[01m[K/opt/ros/humble/include/behaviortree_cpp_v3/utils/safe_any.hpp:93:62:[m[K   required from ‘[01m[KBT::Any::Any(const T&, BT::Any::EnableNonIntegral<T>) [with T = std::atomic<int>; BT::Any::EnableNonIntegral<T> = void*][m[K’
+[01m[K/opt/ros/humble/include/behaviortree_cpp_v3/blackboard.h:107:11:[m[K   required from ‘[01m[Kvoid BT::Blackboard::set(const string&, const T&) [with T = std::atomic<int>; std::string = std::__cxx11::basic_string<char>][m[K’
+[01m[K/opt/ros/humble/include/behaviortree_cpp_v3/tree_node.h:319:26:[m[K   required from ‘[01m[KBT::Result BT::TreeNode::setOutput(const string&, const T&) [with T = std::atomic<int>; BT::Result = nonstd::expected_lite::expected<void, std::__cxx11::basic_string<char> >; std::string = std::__cxx11::basic_string<char>][m[K’
+[01m[K/home/bluemaple/try_rmul/src/decision/src/main.cpp:149:18:[m[K   required from here
+[01m[K/opt/ros/humble/include/behaviortree_cpp_v3/utils/any.hpp:76:89:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: T shall satisfy the CopyConstructible requirements.
+   76 |         static_assert(std::is_copy_constructible<typename std::decay<ValueType>::type>::[01;31m[Kvalue[m[K,
+      |                                                                                         [01;31m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/behaviortree_cpp_v3/utils/any.hpp:76:89:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::integral_constant<bool, false>::value[m[K’ evaluates to false
+gmake[2]: *** [CMakeFiles/main.dir/build.make:76: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/main.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

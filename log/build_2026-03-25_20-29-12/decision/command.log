@@ -1,0 +1,6 @@
+Invoking command in '/home/bluemaple/try_rmul/build/decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bluemaple/try_rmul/src/decision -DCMAKE_INSTALL_PREFIX=/home/bluemaple/try_rmul/install/decision
+Invoked command in '/home/bluemaple/try_rmul/build/decision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/bluemaple/try_rmul/src/decision -DCMAKE_INSTALL_PREFIX=/home/bluemaple/try_rmul/install/decision
+Invoking command in '/home/bluemaple/try_rmul/build/decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/bluemaple/try_rmul/build/decision -- -j24 -l24
+Invoked command in '/home/bluemaple/try_rmul/build/decision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/bluemaple/try_rmul/build/decision -- -j24 -l24
+Invoking command in '/home/bluemaple/try_rmul/build/decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/bluemaple/try_rmul/build/decision
+Invoked command in '/home/bluemaple/try_rmul/build/decision' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/bluemaple/try_rmul/build/decision

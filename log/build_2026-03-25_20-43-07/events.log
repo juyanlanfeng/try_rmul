@@ -1,0 +1,74 @@
+[0.000000] (-) TimerEvent: {}
+[0.000432] (decision) JobQueued: {'identifier': 'decision', 'dependencies': OrderedDict()}
+[0.000456] (decision) JobStarted: {'identifier': 'decision'}
+[0.008107] (decision) JobProgress: {'identifier': 'decision', 'progress': 'cmake'}
+[0.009204] (decision) JobProgress: {'identifier': 'decision', 'progress': 'build'}
+[0.009241] (decision) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/bluemaple/try_rmul/build/decision', '--', '-j24', '-l24'], 'cwd': '/home/bluemaple/try_rmul/build/decision', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bluemaple'), ('GIT_ASKPASS', '/home/bluemaple/.vscode-server/bin/07ff9d6178ede9a1bd12ad3399074d726ebe6e43/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/bluemaple'), ('TERM_PROGRAM_VERSION', '1.112.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-afd6ee29-e773-4782-8f82-b14eb6099c94.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/bluemaple/.vscode-server/bin/07ff9d6178ede9a1bd12ad3399074d726ebe6e43/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/bluemaple/.vscode-server/bin/07ff9d6178ede9a1bd12ad3399074d726ebe6e43/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/bluemaple/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/bluemaple/try_rmul/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'bluemaple'), ('NAME', 'bluemaple'), ('WSL_INTEROP', '/run/WSL/418_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/bluemaple/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/bluemaple/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/bluemaple/.vscode-server/bin/07ff9d6178ede9a1bd12ad3399074d726ebe6e43/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/d/Microsoft VS Code:/mnt/c/Program Files (x86)/STMicroelectronics/stlink_server:/mnt/d/ST/STM32CubeCLT_1.20.0:/mnt/d/ST/STM32CubeCLT_1.20.0/CMake/bin:/mnt/d/ST/STM32CubeCLT_1.20.0/st-arm-clang/bin:/mnt/d/ST/STM32CubeCLT_1.20.0/Ninja/bin:/mnt/d/ST/STM32CubeCLT_1.20.0/GNU-tools-for-STM32/bin:/mnt/d/ST/STM32CubeCLT_1.20.0/STLink-gdb-server/bin:/mnt/d/ST/STM32CubeCLT_1.20.0/STM32CubeProgrammer/bin:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/d/python3/Scripts/:/mnt/d/python3/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Windows/system32/downlevel:/mnt/d/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/d/mathlab/runtime/win64:/mnt/d/mathlab/bin:/mnt/d/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Users/35576/AppData/Local/Microsoft/WindowsApps:/mnt/d/PyCharm Community Edition 2025.1.2/bin:/mnt/c/Users/35576/AppData/Local/Programs/Ollama:/mnt/c/Users/35576/.dotnet/tools:/mnt/d/bin:/mnt/c/Users/35576/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-8.0.1-full_build/bin:/mnt/d/Microsoft VS Code/bin:/mnt/d/CLion 2025.3.2/bin:/mnt/c/Users/35576/AppData/Roaming/npm:/snap/bin:/home/bluemaple/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/bluemaple/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-73ff4a8bc670ffa9.txt'), ('LANG', 'C.UTF-8'), ('PYTHONSTARTUP', '/home/bluemaple/.vscode-server/data/User/workspaceStorage/3041f8d89c00773b4e95a2aad5619150/ms-python.python/pythonrc.py'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-2dc2db61d1.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/bluemaple/try_rmul/install/decision:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/bluemaple/try_rmul/build/decision'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/bluemaple/try_rmul/install/decision:/opt/ros/humble'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up')]), 'shell': False}
+[0.065688] (decision) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target main\x1b[0m\n'}
+[0.075658] (decision) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o\x1b[0m\n'}
+[0.099492] (-) TimerEvent: {}
+[0.199790] (-) TimerEvent: {}
+[0.300112] (-) TimerEvent: {}
+[0.400407] (-) TimerEvent: {}
+[0.500748] (-) TimerEvent: {}
+[0.601079] (-) TimerEvent: {}
+[0.701387] (-) TimerEvent: {}
+[0.801721] (-) TimerEvent: {}
+[0.902050] (-) TimerEvent: {}
+[1.002379] (-) TimerEvent: {}
+[1.102682] (-) TimerEvent: {}
+[1.203114] (-) TimerEvent: {}
+[1.303670] (-) TimerEvent: {}
+[1.404016] (-) TimerEvent: {}
+[1.504359] (-) TimerEvent: {}
+[1.604869] (-) TimerEvent: {}
+[1.705219] (-) TimerEvent: {}
+[1.805549] (-) TimerEvent: {}
+[1.905915] (-) TimerEvent: {}
+[2.006370] (-) TimerEvent: {}
+[2.106708] (-) TimerEvent: {}
+[2.122420] (decision) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/utils/safe_any.hpp:11\x1b[m\x1b[K,\n'}
+[2.122623] (decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/basic_types.h:14\x1b[m\x1b[K,\n'}
+[2.122663] (decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/tree_node.h:22\x1b[m\x1b[K,\n'}
+[2.122693] (decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/control_node.h:17\x1b[m\x1b[K,\n'}
+[2.122717] (decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/controls/parallel_node.h:17\x1b[m\x1b[K,\n'}
+[2.122741] (decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/behavior_tree.h:17\x1b[m\x1b[K,\n'}
+[2.122762] (decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/bt_factory.h:25\x1b[m\x1b[K,\n'}
+[2.122783] (decision) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/bluemaple/try_rmul/src/decision/src/main.cpp:1\x1b[m\x1b[K:\n'}
+[2.122803] (decision) StderrLine: {'line': b'/opt/ros/humble/include/behaviortree_cpp_v3/utils/any.hpp: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Klinb::any::any(ValueType&&) [with ValueType = const std::atomic<int>&; <template-parameter-1-2> = void]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.122825] (decision) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/utils/safe_any.hpp:93:62:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KBT::Any::Any(const T&, BT::Any::EnableNonIntegral<T>) [with T = std::atomic<int>; BT::Any::EnableNonIntegral<T> = void*]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.122846] (decision) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/blackboard.h:107:11:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[Kvoid BT::Blackboard::set(const string&, const T&) [with T = std::atomic<int>; std::string = std::__cxx11::basic_string<char>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.122884] (decision) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/tree_node.h:319:26:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KBT::Result BT::TreeNode::setOutput(const string&, const T&) [with T = std::atomic<int>; BT::Result = nonstd::expected_lite::expected<void, std::__cxx11::basic_string<char> >; std::string = std::__cxx11::basic_string<char>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.122909] (decision) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bluemaple/try_rmul/src/decision/src/main.cpp:149:18:\x1b[m\x1b[K   required from here\n'}
+[2.122929] (decision) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/utils/any.hpp:76:89:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: T shall satisfy the CopyConstructible requirements.\n'}
+[2.122950] (decision) StderrLine: {'line': b'   76 |         static_assert(std::is_copy_constructible<typename std::decay<ValueType>::type>::\x1b[01;31m\x1b[Kvalue\x1b[m\x1b[K,\n'}
+[2.122969] (decision) StderrLine: {'line': b'      |                                                                                         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.122987] (decision) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/behaviortree_cpp_v3/utils/any.hpp:76:89:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstd::integral_constant<bool, false>::value\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[2.206831] (-) TimerEvent: {}
+[2.307162] (-) TimerEvent: {}
+[2.407499] (-) TimerEvent: {}
+[2.507824] (-) TimerEvent: {}
+[2.608141] (-) TimerEvent: {}
+[2.708497] (-) TimerEvent: {}
+[2.808825] (-) TimerEvent: {}
+[2.909118] (-) TimerEvent: {}
+[3.009447] (-) TimerEvent: {}
+[3.109789] (-) TimerEvent: {}
+[3.210131] (-) TimerEvent: {}
+[3.310469] (-) TimerEvent: {}
+[3.410783] (-) TimerEvent: {}
+[3.511088] (-) TimerEvent: {}
+[3.611416] (-) TimerEvent: {}
+[3.711760] (-) TimerEvent: {}
+[3.812115] (-) TimerEvent: {}
+[3.912437] (-) TimerEvent: {}
+[4.012719] (-) TimerEvent: {}
+[4.113032] (-) TimerEvent: {}
+[4.213353] (-) TimerEvent: {}
+[4.305442] (decision) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/main.dir/build.make:76: CMakeFiles/main.dir/src/main.cpp.o] Error 1\n'}
+[4.305652] (decision) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/main.dir/all] Error 2\n'}
+[4.305915] (decision) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.307588] (decision) CommandEnded: {'returncode': 2}
+[4.313566] (-) TimerEvent: {}
+[4.321258] (decision) JobEnded: {'identifier': 'decision', 'rc': 2}
+[4.322237] (-) EventReactorShutdown: {}

@@ -1,0 +1,23 @@
+bt_node:
+  ros__parameters:
+    # 补给点
+    add_blood : [0.0, 0.0]
+    # pos1
+    pos1 : [1.0, 1.0]
+    # pos2
+    pos2 : [2.0, 2.0]
+    # pos3
+    pos3 : [3.0, 3.0]
+    # pos4
+    pos4 : [4.0, 4.0]
+    # pos5
+    pos5 : [5.0, 5.0]
+    # 敌人默认位置
+    attack_pos : [9.0, 9.0]
+    # 巡逻
+    idle_pos : [10.0, 10.0]
+
+    # 满血血量
+    max_blood : 400.0
+    # 允许的最低血量
+    min_blood : 200.0

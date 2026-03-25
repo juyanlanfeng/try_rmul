@@ -1,0 +1,2 @@
+Invoking command in '/home/bluemaple/learn_projects/try_rmul/build/ul_decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/bluemaple/learn_projects/try_rmul/src/ul_decision -DCMAKE_INSTALL_PREFIX=/home/bluemaple/learn_projects/try_rmul/install/ul_decision
+Invoked command in '/home/bluemaple/learn_projects/try_rmul/build/ul_decision' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake /home/bluemaple/learn_projects/try_rmul/src/ul_decision -DCMAKE_INSTALL_PREFIX=/home/bluemaple/learn_projects/try_rmul/install/ul_decision

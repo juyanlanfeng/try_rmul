@@ -1,0 +1,2 @@
+Invoking command in '/home/bluemaple/learn_projects/try_rmul/build/decision': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/bluemaple/learn_projects/try_rmul/build/decision -- -j24 -l24
+Invoked command in '/home/bluemaple/learn_projects/try_rmul/build/decision' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/bluemaple/learn_projects/try_rmul/build/decision -- -j24 -l24

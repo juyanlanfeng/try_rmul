@@ -1,0 +1,58 @@
+[0.006s] Invoking command in '/home/bluemaple/try_rmul/build/decision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bluemaple/try_rmul/build/decision -- -j24 -l24
+[0.020s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.082s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[0.238s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.239s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.242s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.246s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.252s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.265s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.266s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[5.804s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.825s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[5.859s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[5.859s] -- Configured cppcheck include dirs: /home/bluemaple/try_rmul/src/decision/include
+[5.859s] -- Configured cppcheck exclude dirs and/or files: 
+[5.860s] -- Added test 'flake8' to check Python code syntax and style conventions
+[5.860s] -- Added test 'lint_cmake' to check CMake code style
+[5.860s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[5.860s] -- Added test 'uncrustify' to check C / C++ code style
+[5.861s] -- Configured uncrustify additional arguments: 
+[5.861s] -- Added test 'xmllint' to check XML markup files
+[5.861s] -- Configuring done
+[5.871s] -- Generating done
+[5.873s] -- Build files have been written to: /home/bluemaple/try_rmul/build/decision
+[5.889s] [35m[1mConsolidate compiler generated dependencies of target main[0m
+[5.898s] [ 33%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[5.898s] [ 33%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o[0m
+[5.898s] [ 50%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/actions/update_status.cpp.o[0m
+[5.898s] [ 66%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/actions/check_status.cpp.o[0m
+[5.899s] [ 83%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o[0m
+[13.363s] [100%] [32m[1mLinking CXX executable main[0m
+[13.986s] [100%] Built target main
+[13.993s] Invoked command in '/home/bluemaple/try_rmul/build/decision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bluemaple/try_rmul/build/decision -- -j24 -l24
+[13.999s] Invoking command in '/home/bluemaple/try_rmul/build/decision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bluemaple/try_rmul/build/decision
+[14.003s] -- Install configuration: ""
+[14.004s] -- Installing: /home/bluemaple/try_rmul/install/decision/lib/decision/main
+[14.007s] -- Set runtime path of "/home/bluemaple/try_rmul/install/decision/lib/decision/main" to ""
+[14.007s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/param
+[14.007s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/param/settings_param.yaml
+[14.007s] -- Installing: /home/bluemaple/try_rmul/install/decision/share/decision/param/decision_tree.xml
+[14.008s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/launch
+[14.008s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/launch/bringup.launch.py
+[14.008s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/ament_index/resource_index/package_run_dependencies/decision
+[14.008s] -- Installing: /home/bluemaple/try_rmul/install/decision/share/ament_index/resource_index/parent_prefix_path/decision
+[14.008s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/environment/ament_prefix_path.sh
+[14.008s] -- Installing: /home/bluemaple/try_rmul/install/decision/share/decision/environment/ament_prefix_path.dsv
+[14.008s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/environment/path.sh
+[14.008s] -- Installing: /home/bluemaple/try_rmul/install/decision/share/decision/environment/path.dsv
+[14.008s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/local_setup.bash
+[14.008s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/local_setup.sh
+[14.008s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/local_setup.zsh
+[14.008s] -- Installing: /home/bluemaple/try_rmul/install/decision/share/decision/local_setup.dsv
+[14.009s] -- Installing: /home/bluemaple/try_rmul/install/decision/share/decision/package.dsv
+[14.009s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/ament_index/resource_index/packages/decision
+[14.009s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/cmake/decisionConfig.cmake
+[14.009s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/cmake/decisionConfig-version.cmake
+[14.009s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/package.xml
+[14.011s] Invoked command in '/home/bluemaple/try_rmul/build/decision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bluemaple/try_rmul/build/decision

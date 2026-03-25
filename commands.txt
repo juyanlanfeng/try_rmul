@@ -64,7 +64,6 @@ ros2 launch foxglove_bridge foxglove_bridge_launch.xml
 决策树
 ros2 topic pub /game_start std_msgs/msg/Bool "data: true" -1
 ros2 topic pub /cur_hp std_msgs/msg/Float32 "data: 400.0" -1
-ros2 topic pub /teammate_at_center std_msgs/msg/Bool "data: true" -1
-ros2 topic pub /center_teammate_hp std_msgs/msg/Float32 "data: 100.0" -1
-ros2 topic pub /game_process std_msgs/msg/Float32 "data: 1.0" -1
-ros2 topic pub /enermy_approach std_msgs/msg/Bool "data: true" -1
+ros2 topic pub /ctlarea_status std_msgs/msg/Int16 "data: 1" -1
+ros2 topic pub /enermy_observed std_msgs/msg/Bool "data: true" -1
+ros2 topic pub /enermy_onhighland std_msgs/msg/Bool "data: true" -1

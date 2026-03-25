@@ -83,14 +83,78 @@ CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bluemaple/try_rmul/src/decision/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
 
+CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o: /home/bluemaple/try_rmul/src/decision/plugins/conditions/gamestart.cpp
+CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bluemaple/try_rmul/build/decision/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o -MF CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o.d -o CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o -c /home/bluemaple/try_rmul/src/decision/plugins/conditions/gamestart.cpp
+
+CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bluemaple/try_rmul/src/decision/plugins/conditions/gamestart.cpp > CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.i
+
+CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bluemaple/try_rmul/src/decision/plugins/conditions/gamestart.cpp -o CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.s
+
+CMakeFiles/main.dir/plugins/actions/update_status.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/plugins/actions/update_status.cpp.o: /home/bluemaple/try_rmul/src/decision/plugins/actions/update_status.cpp
+CMakeFiles/main.dir/plugins/actions/update_status.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bluemaple/try_rmul/build/decision/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/plugins/actions/update_status.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/plugins/actions/update_status.cpp.o -MF CMakeFiles/main.dir/plugins/actions/update_status.cpp.o.d -o CMakeFiles/main.dir/plugins/actions/update_status.cpp.o -c /home/bluemaple/try_rmul/src/decision/plugins/actions/update_status.cpp
+
+CMakeFiles/main.dir/plugins/actions/update_status.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/plugins/actions/update_status.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bluemaple/try_rmul/src/decision/plugins/actions/update_status.cpp > CMakeFiles/main.dir/plugins/actions/update_status.cpp.i
+
+CMakeFiles/main.dir/plugins/actions/update_status.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/plugins/actions/update_status.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bluemaple/try_rmul/src/decision/plugins/actions/update_status.cpp -o CMakeFiles/main.dir/plugins/actions/update_status.cpp.s
+
+CMakeFiles/main.dir/plugins/actions/check_status.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/plugins/actions/check_status.cpp.o: /home/bluemaple/try_rmul/src/decision/plugins/actions/check_status.cpp
+CMakeFiles/main.dir/plugins/actions/check_status.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bluemaple/try_rmul/build/decision/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/plugins/actions/check_status.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/plugins/actions/check_status.cpp.o -MF CMakeFiles/main.dir/plugins/actions/check_status.cpp.o.d -o CMakeFiles/main.dir/plugins/actions/check_status.cpp.o -c /home/bluemaple/try_rmul/src/decision/plugins/actions/check_status.cpp
+
+CMakeFiles/main.dir/plugins/actions/check_status.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/plugins/actions/check_status.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bluemaple/try_rmul/src/decision/plugins/actions/check_status.cpp > CMakeFiles/main.dir/plugins/actions/check_status.cpp.i
+
+CMakeFiles/main.dir/plugins/actions/check_status.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/plugins/actions/check_status.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bluemaple/try_rmul/src/decision/plugins/actions/check_status.cpp -o CMakeFiles/main.dir/plugins/actions/check_status.cpp.s
+
+CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o: /home/bluemaple/try_rmul/src/decision/plugins/actions/get_to_position.cpp
+CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bluemaple/try_rmul/build/decision/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o -MF CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o.d -o CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o -c /home/bluemaple/try_rmul/src/decision/plugins/actions/get_to_position.cpp
+
+CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bluemaple/try_rmul/src/decision/plugins/actions/get_to_position.cpp > CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.i
+
+CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bluemaple/try_rmul/src/decision/plugins/actions/get_to_position.cpp -o CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.s
+
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/src/main.cpp.o"
+"CMakeFiles/main.dir/src/main.cpp.o" \
+"CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o" \
+"CMakeFiles/main.dir/plugins/actions/update_status.cpp.o" \
+"CMakeFiles/main.dir/plugins/actions/check_status.cpp.o" \
+"CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/src/main.cpp.o
+main: CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o
+main: CMakeFiles/main.dir/plugins/actions/update_status.cpp.o
+main: CMakeFiles/main.dir/plugins/actions/check_status.cpp.o
+main: CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: /opt/ros/humble/lib/librclcpp.so
 main: /opt/ros/humble/lib/libbehaviortree_cpp_v3.so
@@ -156,7 +220,7 @@ main: /opt/ros/humble/lib/librosidl_runtime_c.so
 main: /opt/ros/humble/lib/librcutils.so
 main: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bluemaple/try_rmul/build/decision/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bluemaple/try_rmul/build/decision/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

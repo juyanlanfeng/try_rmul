@@ -11,8 +11,14 @@ find_package(rclcpp REQUIRED)
 find_package(behaviortree_cpp_v3 REQUIRED)
 find_package(std_msgs REQUIRED)
 
+include_directories(include)
+
 add_executable(main 
     src/main.cpp
+    plugins/conditions/gamestart.cpp
+    plugins/actions/update_status.cpp
+    plugins/actions/check_status.cpp
+    plugins/actions/get_to_position.cpp
 )
 
 # plugins/Condition/GameStart.cpp

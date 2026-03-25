@@ -210,6 +210,102 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+plugins/actions/check_status.o: plugins/actions/check_status.cpp.o
+.PHONY : plugins/actions/check_status.o
+
+# target to build an object file
+plugins/actions/check_status.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/check_status.cpp.o
+.PHONY : plugins/actions/check_status.cpp.o
+
+plugins/actions/check_status.i: plugins/actions/check_status.cpp.i
+.PHONY : plugins/actions/check_status.i
+
+# target to preprocess a source file
+plugins/actions/check_status.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/check_status.cpp.i
+.PHONY : plugins/actions/check_status.cpp.i
+
+plugins/actions/check_status.s: plugins/actions/check_status.cpp.s
+.PHONY : plugins/actions/check_status.s
+
+# target to generate assembly for a file
+plugins/actions/check_status.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/check_status.cpp.s
+.PHONY : plugins/actions/check_status.cpp.s
+
+plugins/actions/get_to_position.o: plugins/actions/get_to_position.cpp.o
+.PHONY : plugins/actions/get_to_position.o
+
+# target to build an object file
+plugins/actions/get_to_position.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o
+.PHONY : plugins/actions/get_to_position.cpp.o
+
+plugins/actions/get_to_position.i: plugins/actions/get_to_position.cpp.i
+.PHONY : plugins/actions/get_to_position.i
+
+# target to preprocess a source file
+plugins/actions/get_to_position.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.i
+.PHONY : plugins/actions/get_to_position.cpp.i
+
+plugins/actions/get_to_position.s: plugins/actions/get_to_position.cpp.s
+.PHONY : plugins/actions/get_to_position.s
+
+# target to generate assembly for a file
+plugins/actions/get_to_position.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.s
+.PHONY : plugins/actions/get_to_position.cpp.s
+
+plugins/actions/update_status.o: plugins/actions/update_status.cpp.o
+.PHONY : plugins/actions/update_status.o
+
+# target to build an object file
+plugins/actions/update_status.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/update_status.cpp.o
+.PHONY : plugins/actions/update_status.cpp.o
+
+plugins/actions/update_status.i: plugins/actions/update_status.cpp.i
+.PHONY : plugins/actions/update_status.i
+
+# target to preprocess a source file
+plugins/actions/update_status.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/update_status.cpp.i
+.PHONY : plugins/actions/update_status.cpp.i
+
+plugins/actions/update_status.s: plugins/actions/update_status.cpp.s
+.PHONY : plugins/actions/update_status.s
+
+# target to generate assembly for a file
+plugins/actions/update_status.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/actions/update_status.cpp.s
+.PHONY : plugins/actions/update_status.cpp.s
+
+plugins/conditions/gamestart.o: plugins/conditions/gamestart.cpp.o
+.PHONY : plugins/conditions/gamestart.o
+
+# target to build an object file
+plugins/conditions/gamestart.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o
+.PHONY : plugins/conditions/gamestart.cpp.o
+
+plugins/conditions/gamestart.i: plugins/conditions/gamestart.cpp.i
+.PHONY : plugins/conditions/gamestart.i
+
+# target to preprocess a source file
+plugins/conditions/gamestart.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.i
+.PHONY : plugins/conditions/gamestart.cpp.i
+
+plugins/conditions/gamestart.s: plugins/conditions/gamestart.cpp.s
+.PHONY : plugins/conditions/gamestart.s
+
+# target to generate assembly for a file
+plugins/conditions/gamestart.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.s
+.PHONY : plugins/conditions/gamestart.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -250,6 +346,18 @@ help:
 	@echo "... decision_uninstall"
 	@echo "... uninstall"
 	@echo "... main"
+	@echo "... plugins/actions/check_status.o"
+	@echo "... plugins/actions/check_status.i"
+	@echo "... plugins/actions/check_status.s"
+	@echo "... plugins/actions/get_to_position.o"
+	@echo "... plugins/actions/get_to_position.i"
+	@echo "... plugins/actions/get_to_position.s"
+	@echo "... plugins/actions/update_status.o"
+	@echo "... plugins/actions/update_status.i"
+	@echo "... plugins/actions/update_status.s"
+	@echo "... plugins/conditions/gamestart.o"
+	@echo "... plugins/conditions/gamestart.i"
+	@echo "... plugins/conditions/gamestart.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

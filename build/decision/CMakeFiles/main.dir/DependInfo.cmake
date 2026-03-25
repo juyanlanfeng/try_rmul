@@ -8,6 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/bluemaple/try_rmul/src/decision/plugins/actions/check_status.cpp" "CMakeFiles/main.dir/plugins/actions/check_status.cpp.o" "gcc" "CMakeFiles/main.dir/plugins/actions/check_status.cpp.o.d"
+  "/home/bluemaple/try_rmul/src/decision/plugins/actions/get_to_position.cpp" "CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o" "gcc" "CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o.d"
+  "/home/bluemaple/try_rmul/src/decision/plugins/actions/update_status.cpp" "CMakeFiles/main.dir/plugins/actions/update_status.cpp.o" "gcc" "CMakeFiles/main.dir/plugins/actions/update_status.cpp.o.d"
+  "/home/bluemaple/try_rmul/src/decision/plugins/conditions/gamestart.cpp" "CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o" "gcc" "CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o.d"
   "/home/bluemaple/try_rmul/src/decision/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
   )
 

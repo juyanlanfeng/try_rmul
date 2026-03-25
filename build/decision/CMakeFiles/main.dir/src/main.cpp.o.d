@@ -685,4 +685,9 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int16__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int16__builder.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int16__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int16__type_support.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int16__type_support.hpp \
+ /home/bluemaple/try_rmul/src/decision/include/decision/game_start.hpp \
+ /home/bluemaple/try_rmul/src/decision/include/decision/update_status.hpp \
+ /home/bluemaple/try_rmul/src/decision/include/decision/check_status.hpp \
+ /home/bluemaple/try_rmul/src/decision/include/decision/get_to_position.hpp \
+ /home/bluemaple/try_rmul/src/decision/include/decision/public_data.hpp

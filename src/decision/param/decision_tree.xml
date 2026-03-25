@@ -7,6 +7,7 @@
                           ctlarea_status="{ctlarea_status}"
                           enermy_observed="{enermy_observed}"
                           enermy_onhighland="{enermy_onhighland}"
+                          at_home="{at_home}"
 
                           add_blood="{add_blood}"
                           pos_1="{pos_1}"
@@ -18,72 +19,73 @@
                           idle_pos="{idle_pos}"/>
             <WhileDoElse>
                 <CheckStatus get_status="{hp_status}"/>
-                <GetToPosition target_position="{add_blood}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
-                <ReactiveSequence>
-                    <GetToPosition target_position="{pos_1}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+                <GetToPosition target_position="{add_blood}"/>
+                <WhileDoElse>
+                    <CheckStatus get_status="{at_home}"/>
+                    <GetToPosition target_position="{pos_1}"/>
                     <Switch3 variable="{ctlarea_status}" case_1="enermy_control" case_2="myteam_control" case_3="none_control">
                         <SubTree ID="enermy_control" __shared_blackboard="true"/>
                         <SubTree ID="myteam_control" __shared_blackboard="true"/>
                         <SubTree ID="none_control" __shared_blackboard="true"/>
-                        <GetToPosition target_position="{idle_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+                        <GetToPosition target_position="{idle_pos}"/>
                     </Switch3>
-                </ReactiveSequence>
+                </WhileDoElse>
             </WhileDoElse>
         </ReactiveSequence>
     </BehaviorTree>
 
     <BehaviorTree ID="enermy_control">
-        <ReactiveSequence>
-            <GetToPosition target_position="{pos_2}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+        <Sequence>
+            <GetToPosition target_position="{pos_2}"/>
             <WhileDoElse>
                 <CheckStatus get_status="{enermy_observed}"/>
-                <GetToPosition target_position="{attack_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
-                <GetToPosition target_position="{idle_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+                <GetToPosition target_position="{attack_pos}"/>
+                <GetToPosition target_position="{idle_pos}"/>
             </WhileDoElse>
-        </ReactiveSequence>
+        </Sequence>
     </BehaviorTree>
 
     <BehaviorTree ID="myteam_control">
         <WhileDoElse>
             <CheckStatus get_status="{enermy_onhighland}"/>
-            <ReactiveSequence>
-                <GetToPosition target_position="{pos_4}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+            <Sequence>
+                <GetToPosition target_position="{pos_4}"/>
                 <WhileDoElse>
                     <CheckStatus get_status="{enermy_observed}"/>
-                    <GetToPosition target_position="{attack_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
-                    <GetToPosition target_position="{idle_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+                    <GetToPosition target_position="{attack_pos}"/>
+                    <GetToPosition target_position="{idle_pos}"/>
                 </WhileDoElse>
-            </ReactiveSequence>
-            <ReactiveSequence>
-                <GetToPosition target_position="{pos_3}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+            </Sequence>
+            <Sequence>
+                <GetToPosition target_position="{pos_3}"/>
                 <WhileDoElse>
                     <CheckStatus get_status="{enermy_observed}"/>
-                    <GetToPosition target_position="{attack_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
-                    <GetToPosition target_position="{idle_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+                    <GetToPosition target_position="{attack_pos}"/>
+                    <GetToPosition target_position="{idle_pos}"/>
                 </WhileDoElse>
-            </ReactiveSequence>
+            </Sequence>
         </WhileDoElse>
     </BehaviorTree>
 
     <BehaviorTree ID="none_control">
         <WhileDoElse>
             <CheckStatus get_status="{enermy_onhighland}"/>
-            <ReactiveSequence>
-                <GetToPosition target_position="{pos_4}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+            <Sequence>
+                <GetToPosition target_position="{pos_4}"/>
                 <WhileDoElse>
                     <CheckStatus get_status="{enermy_observed}"/>
-                    <GetToPosition target_position="{attack_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
-                    <GetToPosition target_position="{idle_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+                    <GetToPosition target_position="{attack_pos}"/>
+                    <GetToPosition target_position="{idle_pos}"/>
                 </WhileDoElse>
-            </ReactiveSequence>
-            <ReactiveSequence>
-                <GetToPosition target_position="{pos_5}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+            </Sequence>
+            <Sequence>
+                <GetToPosition target_position="{pos_5}"/>
                 <WhileDoElse>
                     <CheckStatus get_status="{enermy_observed}"/>
-                    <GetToPosition target_position="{attack_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
-                    <GetToPosition target_position="{idle_pos}" get_curpos="{cur_pos}" update_curpos="{cur_pos}"/>
+                    <GetToPosition target_position="{attack_pos}"/>
+                    <GetToPosition target_position="{idle_pos}"/>
                 </WhileDoElse>
-            </ReactiveSequence>
+            </Sequence>
         </WhileDoElse>
     </BehaviorTree>
 
@@ -104,6 +106,7 @@
             <output_port name="ctlarea_status">who takes the control area, 1:enermy 2:me 3:none</output_port>
             <output_port name="enermy_observed">enermy observed</output_port>
             <output_port name="enermy_onhighland">whether enermy on highland</output_port>
+            <output_port name="at_home">whether at home</output_port>
             <!-- 各种位置 -->
             <output_port name="add_blood">the position of home</output_port>
             <output_port name="pos_1">pos 1</output_port>
@@ -117,8 +120,6 @@
 
         <Action ID="GetToPosition">
             <input_port name="target_position">position to go</input_port>
-            <input_port name="get_curpos">get the current position</input_port>
-            <output_port name="update_curpos">update current position</output_port>
         </Action>
 
     </TreeNodesModel>

@@ -1,0 +1,31 @@
+[0.006s] Invoking command in '/home/bluemaple/try_rmul/build/decision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bluemaple/try_rmul/build/decision -- -j24 -l24
+[0.029s] [35m[1mConsolidate compiler generated dependencies of target main[0m
+[0.037s] [ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[8.115s] [100%] [32m[1mLinking CXX executable main[0m
+[8.587s] [100%] Built target main
+[8.594s] Invoked command in '/home/bluemaple/try_rmul/build/decision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/bluemaple/try_rmul/build/decision -- -j24 -l24
+[8.600s] Invoking command in '/home/bluemaple/try_rmul/build/decision': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bluemaple/try_rmul/build/decision
+[8.603s] -- Install configuration: ""
+[8.603s] -- Installing: /home/bluemaple/try_rmul/install/decision/lib/decision/main
+[8.608s] -- Set runtime path of "/home/bluemaple/try_rmul/install/decision/lib/decision/main" to ""
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/param
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/param/settings_param.yaml
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/param/decision_tree.xml
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/launch
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/launch/bringup.launch.py
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/ament_index/resource_index/package_run_dependencies/decision
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/ament_index/resource_index/parent_prefix_path/decision
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/environment/ament_prefix_path.sh
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/environment/ament_prefix_path.dsv
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/environment/path.sh
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/environment/path.dsv
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/local_setup.bash
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/local_setup.sh
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/local_setup.zsh
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/local_setup.dsv
+[8.609s] -- Installing: /home/bluemaple/try_rmul/install/decision/share/decision/package.dsv
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/ament_index/resource_index/packages/decision
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/cmake/decisionConfig.cmake
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/cmake/decisionConfig-version.cmake
+[8.609s] -- Up-to-date: /home/bluemaple/try_rmul/install/decision/share/decision/package.xml
+[8.610s] Invoked command in '/home/bluemaple/try_rmul/build/decision' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/bluemaple/try_rmul/build/decision

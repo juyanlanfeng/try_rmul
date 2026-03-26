@@ -1,5 +1,5 @@
-#include "decision/update_status.hpp"
-#include "decision/public_data.hpp"
+#include "ul_decision/update_status.hpp"
+#include "ul_decision/public_data.hpp"
 
 UpdateStatus::UpdateStatus(const std::string& action_name, const BT::NodeConfiguration& conf)
     : BT::SyncActionNode(action_name, conf)
@@ -17,6 +17,8 @@ UpdateStatus::UpdateStatus(const std::string& action_name, const BT::NodeConfigu
 
     node_->declare_parameter<double>("max_blood", 400.0);
     node_->declare_parameter<double>("min_blood", 200.0);
+    node_->declare_parameter<int>("ctlarea_status", 3);
+    node_->declare_parameter<bool>("enermy_onhighland", false);
 
     add_blood_ = node_->get_parameter("add_blood").as_double_array();
     pos_1_ = node_->get_parameter("pos1").as_double_array();
@@ -29,6 +31,8 @@ UpdateStatus::UpdateStatus(const std::string& action_name, const BT::NodeConfigu
 
     max_hp_ = node_->get_parameter("max_blood").as_double();
     min_hp_ = node_->get_parameter("min_blood").as_double();
+    temp_ctlarea_status = node_->get_parameter("ctlarea_status").as_int();
+    temp_enermy_onhighland = node_->get_parameter("enermy_onhighland").as_bool();
 
     cur_hp_sub_ = node_->create_subscription<std_msgs::msg::Float32>(
         "/cur_hp", 10, std::bind(&UpdateStatus::cur_hp_callback, this, std::placeholders::_1));
@@ -39,10 +43,10 @@ UpdateStatus::UpdateStatus(const std::string& action_name, const BT::NodeConfigu
     enermy_onhighland_sub_ = node_->create_subscription<std_msgs::msg::Bool>(
         "/enermy_onhighland", 10, std::bind(&UpdateStatus::enermy_onhighland_callback, this, std::placeholders::_1));
 
-    cur_hp_.store(400.0);
-    ctlarea_status_.store(3);
+    cur_hp_.store(max_hp_); // 默认满血
+    ctlarea_status_.store(temp_ctlarea_status);
     enermy_observed_.store(false);
-    enermy_onhighland_.store(false);
+    enermy_onhighland_.store(temp_enermy_onhighland);
 }
 
 void UpdateStatus::cur_hp_callback(std_msgs::msg::Float32 hp_msg)
@@ -120,7 +124,7 @@ BT::NodeStatus UpdateStatus::tick()
 
     // 使用全局变量 at_home
     if (at_home) {
-        cur_hp_.store(400.0);
+        cur_hp_.store(max_hp_);
         setOutput("at_home", true);
     } else {
         setOutput("at_home", false);

@@ -21,3 +21,8 @@ bt_node:
     max_blood : 400.0
     # 允许的最低血量
     min_blood : 200.0
+
+    # 控制区状态 1：敌方控制 2：我方控制 3：无人控制
+    ctlarea_status : 3
+    # 高地上是否有敌人(对方是否有上高地的能力)
+    enermy_onhighland : false

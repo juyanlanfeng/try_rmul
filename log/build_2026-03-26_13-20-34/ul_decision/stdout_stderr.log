@@ -1,0 +1,69 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+-- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/bluemaple/learn_projects/try_rmul/src/ul_decision/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/bluemaple/learn_projects/try_rmul/build/ul_decision
+[ 16%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/conditions/gamestart.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/actions/check_status.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/actions/update_status.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/main.dir/plugins/actions/get_to_position.cpp.o[0m
+[100%] [1m[32mLinking CXX executable main[0m
+[100%] Built target main
+-- Install configuration: ""
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/lib/ul_decision/main
+-- Set non-toolchain portion of runtime path of "/home/bluemaple/learn_projects/try_rmul/install/ul_decision/lib/ul_decision/main" to ""
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/param
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/param/settings_param.yaml
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/param/decision_tree.xml
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/launch
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/launch/bringup.launch.py
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ament_index/resource_index/package_run_dependencies/ul_decision
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ament_index/resource_index/parent_prefix_path/ul_decision
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/environment/ament_prefix_path.sh
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/environment/ament_prefix_path.dsv
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/environment/path.sh
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/environment/path.dsv
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/local_setup.bash
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/local_setup.sh
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/local_setup.zsh
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/local_setup.dsv
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/package.dsv
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ament_index/resource_index/packages/ul_decision
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/cmake/ul_decisionConfig.cmake
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/cmake/ul_decisionConfig-version.cmake
+-- Installing: /home/bluemaple/learn_projects/try_rmul/install/ul_decision/share/ul_decision/package.xml

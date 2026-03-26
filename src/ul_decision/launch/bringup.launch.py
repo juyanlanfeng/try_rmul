@@ -11,7 +11,7 @@ import os
 
 def generate_launch_description():
     # 获取包路径
-    pkg_share = get_package_share_directory('decision')
+    pkg_share = get_package_share_directory('ul_decision')
 
     # 参数文件路径
     decision_params_file = os.path.join(pkg_share, 'param', 'settings_param.yaml')
@@ -23,7 +23,7 @@ def generate_launch_description():
     )
 
     decision_node = Node(
-        package='decision',
+        package='ul_decision',
         executable='main',
         name='decision_node',
         output='screen',

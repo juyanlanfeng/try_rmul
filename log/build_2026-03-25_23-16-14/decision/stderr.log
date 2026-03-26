@@ -1,4 +1,0 @@
-[0mCMake Error: The current CMakeCache.txt directory /home/bluemaple/learn_projects/try_rmul/build/decision/CMakeCache.txt is different than the directory /home/bluemaple/try_rmul/build/decision where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
-[0mCMake Error: The source directory "/home/bluemaple/try_rmul/src/decision" does not exist.
-Specify --help for usage, or press the help button on the CMake GUI.[0m
-gmake: *** [Makefile:375：cmake_check_build_system] 错误 1

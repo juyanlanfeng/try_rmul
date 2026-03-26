@@ -358,15 +358,6 @@ behaviortree_cpp_v3_DIR:PATH=/opt/ros/humble/lib/cmake/behaviortree_cpp_v3
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/humble/share/builtin_interfaces/cmake
 
-//Value Computed by CMake
-decision_BINARY_DIR:STATIC=/home/bluemaple/learn_projects/try_rmul/build/ul_decision
-
-//Value Computed by CMake
-decision_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-decision_SOURCE_DIR:STATIC=/home/bluemaple/learn_projects/try_rmul/src/ul_decision
-
 //The directory containing a CMake configuration file for fastcdr.
 fastcdr_DIR:PATH=/opt/ros/humble/lib/cmake/fastcdr
 
